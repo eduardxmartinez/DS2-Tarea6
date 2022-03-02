@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 6</title>
+</head>
+<body>
+    <h1>Tarea 6</h1>
+    <h3>Código</h3>
+    <p>package ds2.tarea6;</p>
+    
+    <p>import java.util.Scanner;</p>
+    
+    <p>public class DS2Tarea6 {</p>
+    
+    <p>&nbsp; &nbsp; public static void main(String args[]) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; int z;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; sumar();<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; desplegar(9);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; z = cuadrado(80);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(z);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; raizCuadrada();<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; mayor();<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; mayorArray();<br />
+        &nbsp; &nbsp; }</p>
+    
+    <p>&nbsp; &nbsp; public static void sumar() {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;\n****METODO SUMAR****&quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; int n1, n2, suma;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; Scanner sc = new Scanner(System.in);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(&quot;Valor 1 : &quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; n1 = sc.nextInt();<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(&quot;Valor 2 : &quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; n2 = sc.nextInt();<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; suma = n1 + n2;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;La suma es : &quot; + suma);<br />
+        &nbsp; &nbsp; }</p>
+    
+    <p>&nbsp; &nbsp; public static void desplegar(int x) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;\n****METODO DESPLEGAR****&quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; int i;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; for (i = 1; i &lt;= x; i++) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(i + &quot; &quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;&quot;);<br />
+        &nbsp; &nbsp; }</p>
+    
+    <p>&nbsp; &nbsp; public static int cuadrado(int x) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;\n****METODO CUADRADO****&quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; int resultado;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; resultado = x * x;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; return resultado;<br />
+        &nbsp; &nbsp; }</p>
+    
+    <p>&nbsp; &nbsp; public static void raizCuadrada() {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;\n****METODO RAIZ CUADRADA****&quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; double resultado, n;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; Scanner sc = new Scanner(System.in);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(&quot;Ingresa un valor: &quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; n = sc.nextDouble();<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; resultado = Math.pow(n, 0.5);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;La ra&iacute;z cuadrada es: &quot; + resultado);<br />
+        &nbsp; &nbsp; }</p>
+    
+    <p>&nbsp; &nbsp; public static void mayor() {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;\n****METODO MAYOR DE 3 NUMEROS****&quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; double[] array = new double[3];<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; double mayor = 0;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; Scanner sc = new Scanner(System.in);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;Ingrese 3 n&uacute;meros&quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; 3; i++) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(&quot;Valor &quot; + (i + 1) + &quot;: &quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; array[i] = sc.nextDouble();<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mayor = array[0];<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (array[i] &gt;= mayor) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mayor = array[i];<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;El n&uacute;mero mayor es: &quot; + mayor);<br />
+        &nbsp; &nbsp; }</p>
+    
+    <p>&nbsp; &nbsp; public static void mayorArray() {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;\n****METODO MAYOR DE UN ARREGLO****&quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; double[][] array = new double[4][4];<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; double mayor = 0;<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; Scanner sc = new Scanner(System.in);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;Ingrese 16 n&uacute;meros&quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; 4; i++) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; 4; j++) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(&quot;Valor [&quot; + i + &quot;][&quot; +
+        j + &quot;]: &quot;);<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; array[i][j] = sc.nextDouble();<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; mayor = array[0][0];<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; 4; i++) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; 4; j++) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (array[i][j] &gt;= mayor) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mayor = array[i][j];<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(&quot;El n&uacute;mero mayor es: &quot; + mayor);<br />
+        &nbsp; &nbsp; }</p>
+    
+    <p>}<br />
+        &nbsp;</p>
+    <h1>Resultado:</h1>
+    <img src="./img1.png">
+    <img src="./img2.png">
+    <img src="./img3.png">
+</body>
+</html>
